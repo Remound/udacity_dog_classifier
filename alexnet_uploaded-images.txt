@@ -1,0 +1,80 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = alexnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                     Dog_01.jpg  label:                        dog
+ 2 key:                     Dog_02.jpg  label:                        dog
+ 3 key:             Kobe_Bryant_01.jpg  label:                kobe bryant
+ 4 key:                    Lion_01.jpg  label:                       lion
+Key: Dog_01.jpg Value: ['dog', 'lakeland terrier', 0]
+Key: Dog_02.jpg Value: ['dog', 'hen-of-the-woods, hen of the woods, polyporus frondosus, grifola frondosa', 0]
+Key: Kobe_Bryant_01.jpg Value: ['kobe bryant', 'basketball', 0]
+Key: Lion_01.jpg Value: ['lion', 'chow, chow chow', 0]
+
+     MATCH:
+
+ NOT A MATCH:
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:               lakeland terrier
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier: hen-of-the-woods, hen of the woods, polyporus frondosus, grifola frondosa
+
+            Kobe_Bryant_01.jpg: 
+Real:                kobe bryant   Classifier:                     basketball
+
+                   Lion_01.jpg: 
+Real:                       lion   Classifier:                chow, chow chow
+
+# Total Images 4 # Matches: 0 # NOT Matches: 4
+[['dog', 'lakeland terrier', 0, 1, 1]]
+[['dog', 'hen-of-the-woods, hen of the woods, polyporus frondosus, grifola frondosa', 0, 1, 0]]
+[['kobe bryant', 'basketball', 0, 0, 0]]
+[['lion', 'chow, chow chow', 0, 0, 1]]
+
+     MATCH:
+
+ NOT A MATCH:
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:               lakeland terrier  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier: hen-of-the-woods, hen of the woods, polyporus frondosus, grifola frondosa  
+PetLabelDog: 1  ClassLabelDog: 0
+
+            Kobe_Bryant_01.jpg: 
+Real:                kobe bryant   Classifier:                     basketball  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                   Lion_01.jpg: 
+Real:                       lion   Classifier:                chow, chow chow  
+PetLabelDog: 0  ClassLabelDog: 1
+
+# Total Images 4 # Matches: 0 # NOT Matches: 4
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog:  50.0 Pct Corr NOTdog:  50.0  Pct Corr Breed:   0.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog:  50.0 Pct Corr NOTdog:  50.0  Pct Corr Breed:   0.0
+The CNN model architecture you are using is:  alexnet
+The overall count for the number of images is:  4
+The overall count for the number of dog images is:  2
+The overall count for the number of 'not-a-dog' images is:  2
+The percentage of correct dogs is:  50.0
+The percentage of correct breeds is:  0.0
+The percentage of correct 'not-a-dog' is:  50.0
+The percentage of correct label matches is:  0.0
+['dog', 'hen-of-the-woods, hen of the woods, polyporus frondosus, grifola frondosa']
+['lion', 'chow, chow chow']
+['dog', 'lakeland terrier']
+
+** Total Elapsed Runtime: 0:0:0
